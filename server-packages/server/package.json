@@ -1,0 +1,21 @@
+{
+  "name": "noti-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel --root-mode upward src --out-dir dist --extensions .js,.jsx,.ts,.tsx",
+    "build:watch": "babel --watch --root-mode upward src --out-dir dist --extensions .js,.jsx,.ts,.tsx",
+    "test": "jest --projects ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@types/express": "^4.16.1",
+    "jest": "^24.7.1"
+  }
+}
