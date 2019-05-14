@@ -3,9 +3,14 @@
 
 module.exports = {
   presets: [
-    ['@babel/typescript', { isTSX: true, allExtensions: true }],
-    ['@babel/preset-env', { modules: 'commonjs' }],
-    '@babel/react',
+    '@babel/typescript',
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: false,
+        debug: false,
+      },
+    ],
   ],
   plugins: [
     '@babel/proposal-class-properties',
@@ -13,7 +18,10 @@ module.exports = {
       '@babel/plugin-transform-runtime',
       {
         absoluteRuntime: false,
-        corejs: 3,
+        corejs: {
+          version: 3,
+          proposals: true,
+        },
         helpers: true,
         regenerator: true,
         useESModules: false,

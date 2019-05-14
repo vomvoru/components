@@ -1,46 +1,39 @@
 const path = require('path');
 const fs = require('fs');
 
-const getProjects = packagesFolder => {
-  const packages = fs.readdirSync(packagesFolder).filter(package => {
-    try {
-      return fs.lstatSync(path.resolve(packagesFolder, package)).isDirectory();
-    } catch (e) {
-      return false;
-    }
-  });
+const packagesFolder = path.resolve(__dirname, 'packages/');
 
-  const projects = packages.map(package => ({
-    displayName: package,
-    testMatch: [`${path.resolve(packagesFolder, package)}/**/*.test.[jt]s?(x)`],
-  }));
+const packages = fs.readdirSync(packagesFolder).filter(package => {
+  try {
+    return fs.lstatSync(path.resolve(packagesFolder, package)).isDirectory();
+  } catch (e) {
+    return false;
+  }
+});
 
-  return projects;
-};
-
-const projects = [
-  ...getProjects(path.resolve(__dirname, './client-packages/')),
-  ...getProjects(path.resolve(__dirname, './server-packages/')),
-];
+const projects = packages.map(package => ({
+  displayName: package,
+  testMatch: [`${path.resolve(packagesFolder, package)}/**/*.test.[jt]s?(x)`],
+}));
 
 module.exports = {
   rootDir: process.cwd(),
   verbose: true,
-  clearMocks: true,
+  transform: {
+    '^.+\\.[jt]sx?$': path.resolve(__dirname, './jest.config.babel.js'),
+  },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
+  collectCoverageFrom: ['**/lib/**/*.[jt]s?(x)'],
   coverageThreshold: {
     global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-      statements: 100,
+      statements: 0,
+      branches: 0,
+      lines: 0,
+      functions: 0,
     },
   },
-  errorOnDeprecated: false,
-  // TODO https://github.com/facebook/jest/issues/7890 이슈가 해결되어야 notify 옵션을 사용 가능함.
-  // notify: true,
-  notifyMode: 'always',
+  modulePathIgnorePatterns: ['__mocks__'],
   projects,
-  transform: {
-    '^.+\\.[jt]sx?$': path.resolve(__dirname, './jest.babel.js'),
-  },
+  // notify: true, // TODO 아래 이슈가 해결되고 사용해야 되는 옵션이다.
+  // https://github.com/facebook/jest/issues/8036
 };

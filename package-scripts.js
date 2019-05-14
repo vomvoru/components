@@ -1,11 +1,11 @@
-const path = require('path');
+const { create, publish, test, typecheck, eslint } = require('./package-scripts-common');
 
-const createScripts = require('./utils/createScripts');
-
-const scripts = createScripts({
-  jest: {
-    configPath: path.resolve(__dirname, 'jest.config.js'),
+module.exports = {
+  scripts: {
+    create,
+    publish,
+    test,
+    typecheck,
+    eslint,
   },
-});
-
-module.exports = { scripts };
+};
