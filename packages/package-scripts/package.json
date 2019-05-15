@@ -22,8 +22,7 @@
     "eslint-watch": "^5.0.1",
     "jest": "^24.7.1",
     "npm": "^6.9.0",
-    "nps": "^5.9.5",
-    "rollup": "^1.0.2"
+    "nps": "^5.9.5"
   },
   "dependencies": {
     "nps-utils": "^1.7.0"

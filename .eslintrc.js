@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ["@vomvoru/eslint-config-vomvoru"]
+  extends: ["@vomvoru/eslint-config-vomvoru"],
+  globals: {
+    ABCD: true,
+  }
 };

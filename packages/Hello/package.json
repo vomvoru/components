@@ -1,12 +1,13 @@
 {
-  "name": "@vomvoru/{{name}}",
+  "name": "@vomvoru/Hello",
   "version": "0.0.1",
-  "description": "{{description}}",
+  "description": "",
   "author": "vomvoru",
   "homepage": "",
   "license": "UNLICENSED",
   "main": "dist/index.common.js",
   "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -15,13 +16,19 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
     "eslint": "^5.16.0",
     "eslint-watch": "^5.0.1",
     "jest": "^24.7.1",
     "npm": "^6.9.0",
-    "nps": "^5.9.5"
+    "nps": "^5.9.5",
+    "typescript": "^3.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.4.4",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "peerDependencies": {}
 }

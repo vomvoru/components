@@ -1,19 +1,9 @@
 const path = require('path');
-const fs = require('fs');
+const getPackages = require('./utils/getPackages');
 
-const packagesFolder = path.resolve(__dirname, 'packages/');
-
-const packages = fs.readdirSync(packagesFolder).filter(package => {
-  try {
-    return fs.lstatSync(path.resolve(packagesFolder, package)).isDirectory();
-  } catch (e) {
-    return false;
-  }
-});
-
-const projects = packages.map(package => ({
-  displayName: package,
-  testMatch: [`${path.resolve(packagesFolder, package)}/**/*.test.[jt]s?(x)`],
+const projects = getPackages().map(({ packageName, packagePath }) => ({
+  displayName: packageName,
+  testMatch: [`${packagePath}/**/*.test.[jt]s?(x)`],
 }));
 
 module.exports = {
