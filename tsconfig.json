@@ -80,7 +80,7 @@
     // @TODO 테스트 필요
     // "mapRoot": "./map", // "source map 파일을 저장할 root 디렉토리 지정
     // 지정하지 않으면 변환된 파일과 동일한 디렉토리에 저장된다.
-    "sourceMap": false // 소스맵(*.map) 파일 생성 여부
+    "sourceMap": false, // 소스맵(*.map) 파일 생성 여부
     // "sourceRoot": "", // 디버거가 알아야될 .ts파일 root 위치. 소스맵(*.map)에 적용된다.
     // @TODO 테스트 필요
     // "inlineSources": false, // 변환전 파일 .ts 코드를 결과코드에 추가
@@ -92,7 +92,9 @@
 
     // "noLib": false, // 기본 라이브러리(lib.d.ts)를 가져오지 않는다.
 
-    // "plugins": [ ], // 편집환경을 더 좋게 변경하기 위한 플러그인 기능
+    "plugins": [{ 
+      "name": "typescript-plugin-css-modules" 
+    }] // 편집환경을 더 좋게 변경하기 위한 플러그인 기능
 
     // "preserveSymlinks": false, // Symlink파일에서 다른 모듈을 import시 기준경로를 Symlink 경로로 설정
     // 기존에는 Symlink파일에서 다른 모듈을 import시

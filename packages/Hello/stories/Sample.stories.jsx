@@ -1,15 +1,21 @@
 import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 
-import Sample from '../src/index';
+import Sample from '../src/Sample';
+import Readme from '../README.md';
 
 export default storiesOf => {
   storiesOf('Button123', module)
-    .add('with text', withInfo({ inline: true })(() => <Sample>Hello Button</Sample>))
+    .addParameters({
+      readme: {
+        sidebar: Readme,
+      },
+    })
+    .add('with text', withInfo({ inline: true })(() => <Sample text="1">Hello Button</Sample>))
     .add(
       'with emoji',
       withInfo({ inline: true })(() => (
-        <Sample>
+        <Sample text="2">
           <span role="img" aria-label="so cool">
             😀 😎 👍 💯
           </span>

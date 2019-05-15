@@ -1,4 +1,7 @@
-import { configure, storiesOf } from '@storybook/react';
+import { configure, storiesOf, addDecorator } from '@storybook/react';
+import { addReadme } from 'storybook-readme';
+
+addDecorator(addReadme);
 
 const getPackageName = filename => {
   const regexResult = /^.\/([^\/]+)/.exec(filename);
