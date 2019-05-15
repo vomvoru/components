@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
+    "@storybook/addon-info": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "eslint": "^5.16.0",
     "eslint-watch": "^5.0.1",
