@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '@storybook/react/demo';
+import Sample from '../src/index';
 
-storiesOf('Button', module)
-  .add('with text', () => <Button>Hello Button</Button>)
+storiesOf('Button123 ts', module)
+  .add('with text', () => <Sample>Hello Button</Sample>)
   .add('with emoji', () => (
-    <Button>
+    <Sample>
       <span role="img" aria-label="so cool">
         😀 😎 👍 💯
       </span>
-    </Button>
+    </Sample>
   ));
