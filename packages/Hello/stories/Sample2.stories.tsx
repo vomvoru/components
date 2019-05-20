@@ -12,10 +12,10 @@ export default (storiesOf: (name: string, module: NodeModule) => Story) => {
         sidebar: Readme,
       },
     })
-    .add('with text', withInfo({ inline: true })(() => <Sample text="1">Hello Button</Sample>))
+    .add('with text', withInfo()(() => <Sample text="1">Hello Button</Sample>))
     .add(
       'with emoji',
-      withInfo({ inline: true })(() => (
+      withInfo()(() => (
         <Sample text="2">
           <span role="img" aria-label="so cool">
             😀 😎 👍 💯

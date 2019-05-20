@@ -1,7 +1,22 @@
-import { configure, storiesOf, addDecorator } from '@storybook/react';
+import { configure, storiesOf, addDecorator, addParameters } from '@storybook/react';
 import { addReadme } from 'storybook-readme';
 
 addDecorator(addReadme);
+
+addParameters({
+  options: {
+    /**
+     * show story component as full screen
+     * @type {Boolean}
+     */
+    isFullscreen: false,
+    /**
+     * where to show the addon panel
+     * @type {('bottom'|'right')}
+     */
+    panelPosition: 'right',
+  },
+});
 
 const getPackageName = filename => {
   const regexResult = /^.\/([^\/]+)/.exec(filename);
