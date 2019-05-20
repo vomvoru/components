@@ -2,11 +2,11 @@
 
 ## Install
 ```shell
-npm install @vomvoru/Hello
+npm install @snacknews/Hello
 ```
 
 ```jsx
-import Hello from '@vomvoru/Hello';
+import Hello from '@snacknews/Hello';
 
 const App = () => (
   <Hello />
