@@ -6,8 +6,8 @@ const PACKAGES = path.resolve(ROOT, 'packages');
 
 module.exports = {
   template: {
-    js: path.resolve(TEMPLATE_PATH, 'js-util'),
-    ts: path.resolve(TEMPLATE_PATH, 'ts-util'),
+    js: path.resolve(TEMPLATE_PATH, 'js'),
+    ts: path.resolve(TEMPLATE_PATH, 'ts'),
   },
   commonTemplate: path.resolve(TEMPLATE_PATH, 'common'),
   packages: PACKAGES,

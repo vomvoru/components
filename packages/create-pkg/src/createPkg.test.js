@@ -26,8 +26,8 @@ beforeEach(() => {
     
     module.exports = {
       template: {
-        js: path.resolve(TEMPLATE_PATH, 'js-util'),
-        ts: path.resolve(TEMPLATE_PATH, 'ts-util'),
+        js: path.resolve(TEMPLATE_PATH, 'js'),
+        ts: path.resolve(TEMPLATE_PATH, 'ts'),
       },
       commonTemplate: path.resolve(TEMPLATE_PATH, 'common'),
       packages: PACKAGES,
@@ -89,14 +89,14 @@ describe('createPkg 을 실행하면', () => {
     `);
     expect(jsFiles).toMatchInlineSnapshot(`
       Object {
-        "__mocks__/template/js-util/common": "js풀더 common파일 {{name}} {{description}}",
-        "__mocks__/template/js-util/js": "js풀더 js파일 {{name}} {{description}}",
+        "__mocks__/template/js/common": "js풀더 common파일 {{name}} {{description}}",
+        "__mocks__/template/js/js": "js풀더 js파일 {{name}} {{description}}",
       }
     `);
     expect(tsFiles).toMatchInlineSnapshot(`
       Object {
-        "__mocks__/template/ts-util/common": "ts풀더 common파일 {{name}} {{description}}",
-        "__mocks__/template/ts-util/ts": "ts풀더 ts파일 {{name}} {{description}}",
+        "__mocks__/template/ts/common": "ts풀더 common파일 {{name}} {{description}}",
+        "__mocks__/template/ts/ts": "ts풀더 ts파일 {{name}} {{description}}",
       }
     `);
     expect(packagesFiles).toMatchInlineSnapshot(`
@@ -126,14 +126,14 @@ describe('createPkg 을 실행하면', () => {
         `);
     expect(jsFiles).toMatchInlineSnapshot(`
             Object {
-              "__mocks__/template/js-util/common": "js풀더 common파일 {{name}} {{description}}",
-              "__mocks__/template/js-util/js": "js풀더 js파일 {{name}} {{description}}",
+              "__mocks__/template/js/common": "js풀더 common파일 {{name}} {{description}}",
+              "__mocks__/template/js/js": "js풀더 js파일 {{name}} {{description}}",
             }
         `);
     expect(tsFiles).toMatchInlineSnapshot(`
             Object {
-              "__mocks__/template/ts-util/common": "ts풀더 common파일 {{name}} {{description}}",
-              "__mocks__/template/ts-util/ts": "ts풀더 ts파일 {{name}} {{description}}",
+              "__mocks__/template/ts/common": "ts풀더 common파일 {{name}} {{description}}",
+              "__mocks__/template/ts/ts": "ts풀더 ts파일 {{name}} {{description}}",
             }
         `);
     expect(packagesFiles).toMatchInlineSnapshot(`

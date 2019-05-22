@@ -38,10 +38,10 @@ package.json이나 jest.config.js 등의 설정파일이 그대로 남아있게 
 IDE에서 혹은 lerna에서 해석하려고 해서 에러가 나게 됩니다.
 
 다음은 각 템플릿 풀더에 대한 설명입니다.
-**js-util**
+**js**
 js용 템플릿.
-**ts-util**
+**ts**
 ts용 템플릿.
 **common**
 js와 ts 템플릿에 공통적인 파일.
-js-util 혹은 ts-util에 이미 동일한 이름의 파일이 존재하면 무시됩니다.
+js 혹은 ts에 이미 동일한 이름의 파일이 존재하면 무시됩니다.
