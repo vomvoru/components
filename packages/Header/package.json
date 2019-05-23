@@ -1,5 +1,5 @@
 {
-  "name": "@snacknews/Hello",
+  "name": "@snacknews/Header",
   "version": "0.0.1",
   "description": "",
   "author": "vomvoru",
@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.4.4",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

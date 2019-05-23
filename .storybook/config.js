@@ -16,6 +16,9 @@ addParameters({
      */
     panelPosition: 'right',
   },
+  viewport: {
+    defaultViewport: 'iphone6'
+  }
 });
 
 const getPackageName = filename => {
