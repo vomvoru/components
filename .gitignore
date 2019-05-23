@@ -287,3 +287,6 @@ $RECYCLE.BIN/
 coverage
 
 lerna-debug.log
+
+# storybook static 풀더
+storybook-static
