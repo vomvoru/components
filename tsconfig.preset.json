@@ -1,6 +1,7 @@
+// Todo tsc 타입검사 commit hook에 넣기
 {
   "compilerOptions": {
-    "target": "ESNext", // 사용할 ECMAScript 버전 설정
+    "target": "ES2017", // 사용할 ECMAScript 버전 설정
 
     /////////// module ///////////
     "module": "ESNext", // 모듈 설정
@@ -21,14 +22,14 @@
     // "outFile": "", // 단일파일로 출력시 파일명
 
     /////////// declaration ///////////
-    // "declaration": true, // .d.ts 파일의 생성 여부
-    // "declarationDir": "./dist/", // .d.ts 파일이 생성되는 디렉토리 설정
+    "declaration": true, // .d.ts 파일의 생성 여부
+    "declarationDir": "./dist/", // .d.ts 파일이 생성되는 디렉토리 설정
 
     /////////// log ///////////
     "diagnostics": false, // Show diagnostic information.
     "traceResolution": false, // 모듈 검색에 대한 로그메세지 출력 여부
-    "listEmittedFiles": false, // 컴파일된 결과 파일들 이름을 터미널에 출력
-    "listFiles": false, // 컴파일된 파일들 이름을 터미널에 출력
+    "listEmittedFiles": true, // 컴파일된 결과 파일들 이름을 터미널에 출력
+    "listFiles": true, // 컴파일된 파일들 이름을 터미널에 출력
     "locale": "ko", // 에러메세지 출력 언어 설정
     "pretty": true, // 에러 메시지를 예쁘게 설정
     // @TODO 테스트 필요
@@ -55,7 +56,7 @@
     "noStrictGenericChecks": true, // 함수에서 generic의 엄격한 검사 해제 여부
     "noUnusedLocals": true, // 사용안된 지역변수에 대한 오류 보고 여부
     "noUnusedParameters": true, // 사용안된 파라미터에 대한 오류 보고 여부
-
+    
     /////////// edit outfile ///////////
     "charset": "utf8", // 입력파일의 문자집합 형식
     "emitBOM": false, // 출력 파일의 시작 부분에 UTF-8 바이트 순서표 (BOM) 추가여부
@@ -112,6 +113,5 @@
     // Emit design-type metadata for decorated declarations in source. See issue #2577 for details.
     // "noResolve": false // @TODO 테스트 필요
   },
-  "include": ["./**/*.ts", "./**/*.tsx"],
   "exclude": ["node_modules"]
 }

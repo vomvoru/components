@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "nps",
-    "storybook": "start-storybook",
+    "storybook": "NODE_ENV=development start-storybook",
+    "storybook:build": "build-storybook",
+    "storybook:build:dev": "NODE_ENV=development build-storybook",
     "init": "lerna bootstrap --hoist"
   },
   "author": "",
   "license": "UNLICENSED",
   "husky": {
     "hooks": {
-      "pre-commit": "nps typecheck && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -40,6 +42,7 @@
     "@vomvoru/package-scripts": "file:packages/package-scripts",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.15.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
@@ -60,6 +63,8 @@
     "typescript-plugin-css-modules": "^1.0.5"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime-corejs3": "^7.4.5",
     "@storybook/addon-jest": "^5.0.11"
   }
 }

@@ -16,7 +16,6 @@ const getIndexFilePaths = (indexFileDir, exts) =>
   exts.map(ext => path.resolve(indexFileDir, `index.${ext}`));
 
 const getFileType = indexFileDir => () => {
-  console.log('sdfd', getIndexFilePaths(indexFileDir, ['js', 'jsx']));
   if (getIndexFilePaths(indexFileDir, ['js', 'jsx']).some(isFile)) {
     return JAVASCRIPT;
   }

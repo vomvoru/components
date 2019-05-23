@@ -12,7 +12,7 @@ module.exports = createPackageScripts({
     ignorePath: path.resolve(ROOT, '.gitignore'),
   },
   ts: {
-    configPath: path.resolve(ROOT, 'tsconfig.json'),
+    configPath: path.resolve(process.cwd(), 'tsconfig.json'),
   },
   createPkg: {
     configPath: path.resolve(ROOT, 'create-pkg.conf.js'),

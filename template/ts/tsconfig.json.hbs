@@ -1,12 +1,7 @@
 {
+  "extends": "../../tsconfig.preset.json",
   "compilerOptions": {
-    "declaration": true, // .d.ts 파일의 생성 여부
-    "declarationDir": "./dist/" // .d.ts 파일이 생성되는 디렉토리 설정
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"]
   },
-  "references": [
-    { "path": "../global" }
-  ],
-  "extends": "../../tsconfig.json",
-  "include": ["./**/*.ts", "./**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["../../typings/*.d.ts", "./src/*.ts", "./src/*.tsx", "./stories/*.ts", "./stories/*.tsx"]
 }

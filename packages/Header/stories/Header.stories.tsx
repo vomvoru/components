@@ -12,5 +12,5 @@ export default (storiesOf: (name: string, module: NodeModule) => Story) => {
         sidebar: Readme,
       },
     })
-    .add('default', withInfo()(() => <Header text="1">Hello Button</Header>));
+    .add('default', withInfo()(() => <Header />));
 };

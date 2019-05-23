@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// const path = require('path');
-const { open, series, rimraf } = require('nps-utils');
-// const { getFileType, TYPESCRIPT } = require('./getFileType');
+const path = require('path');
+const { open, series, rimraf, concurrent } = require('nps-utils');
+const { getFileType, TYPESCRIPT } = require('./getFileType');
 
-// const getIndexFileType = getFileType(path.resolve(process.cwd(), 'src'));
+const getIndexFileType = getFileType(path.resolve(process.cwd(), 'src'));
 
 // Todo jsdoc
 const createPackageScripts = config => {
@@ -122,16 +122,16 @@ const createPackageScripts = config => {
       },
     };
 
-    // if (getIndexFileType() === TYPESCRIPT) {
-    //   scripts.build.dts = {
-    //     script: 'tsc -p ./tsconfig.json --emitDeclarationOnly',
-    //     description: 'typescript 파일 d.ts 파일 생성',
-    //   };
-    //   scripts.build.default = {
-    //     script: series('nps build.clear', concurrent.nps('build.babel', 'build.dts')),
-    //     description: 'typesript 파일 빌드',
-    //   };
-    // }
+    if (getIndexFileType() === TYPESCRIPT) {
+      scripts.build.dts = {
+        script: 'tsc -p ./tsconfig.json --emitDeclarationOnly',
+        description: 'typescript 파일 d.ts 파일 생성',
+      };
+      scripts.build.default = {
+        script: series('nps build.clear', concurrent.nps('build.babel', 'build.dts')),
+        description: 'typesript 파일 빌드',
+      };
+    }
   }
 
   if (config.updateVersion) {

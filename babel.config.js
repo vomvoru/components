@@ -10,6 +10,7 @@ module.exports = {
       {
         useBuiltIns: false,
         debug: true,
+        modules: false,
       },
     ],
   ],
@@ -25,10 +26,12 @@ module.exports = {
         },
         helpers: true,
         regenerator: true,
-        useESModules: false,
+        useESModules: true,
       },
     ],
+    'babel-plugin-styled-components',
   ],
   inputSourceMap: true,
   sourceMaps: true,
+  sourceType: 'module',
 };
