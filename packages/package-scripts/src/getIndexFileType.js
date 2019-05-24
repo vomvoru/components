@@ -15,7 +15,7 @@ const isFile = pathFile => {
 const getIndexFilePaths = (indexFileDir, exts) =>
   exts.map(ext => path.resolve(indexFileDir, `index.${ext}`));
 
-const getFileType = indexFileDir => () => {
+const getIndexFileType = indexFileDir => {
   if (getIndexFilePaths(indexFileDir, ['js', 'jsx']).some(isFile)) {
     return JAVASCRIPT;
   }
@@ -24,11 +24,12 @@ const getFileType = indexFileDir => () => {
     return TYPESCRIPT;
   }
 
-  throw new Error('index 파일을 찾을수 없습니다.');
+  console.error('index 파일을 찾을수 없습니다.');
+  return false;
 };
 
 module.exports = {
-  getFileType,
+  getIndexFileType,
   TYPESCRIPT,
   JAVASCRIPT,
 };

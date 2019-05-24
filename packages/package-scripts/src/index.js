@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const path = require('path');
 const { open, series, rimraf, concurrent } = require('nps-utils');
-const { getFileType, TYPESCRIPT } = require('./getFileType');
+const { getIndexFileType, TYPESCRIPT } = require('./getIndexFileType');
 
-const getIndexFileType = getFileType(path.resolve(process.cwd(), 'src'));
+const indexFileType = getIndexFileType(path.resolve(process.cwd(), 'src'));
 
 // Todo jsdoc
 const createPackageScripts = config => {
@@ -106,23 +106,24 @@ const createPackageScripts = config => {
     /**
      * build NPM Scripts
      */
+    if (indexFileType) {
+      scripts.build = {
+        default: {
+          script: series.nps('build.clear', 'build.babel'),
+          description: 'javasript 파일 빌드',
+        },
+        clear: {
+          script: rimraf('./dist'),
+          description: '빌드된 파일 삭제',
+        },
+        babel: {
+          script: 'babel src --out-dir dist --root-mode upward --extensions .js,.jsx,.ts,.tsx',
+          description: 'babel 빌드',
+        },
+      };
+    }
 
-    scripts.build = {
-      default: {
-        script: series.nps('build.clear', 'build.babel'),
-        description: 'javasript 파일 빌드',
-      },
-      clear: {
-        script: rimraf('./dist'),
-        description: '빌드된 파일 삭제',
-      },
-      babel: {
-        script: 'babel src --out-dir dist --root-mode upward --extensions .js,.jsx,.ts,.tsx',
-        description: 'babel 빌드',
-      },
-    };
-
-    if (getIndexFileType() === TYPESCRIPT) {
+    if (indexFileType === TYPESCRIPT) {
       scripts.build.dts = {
         script: 'tsc -p ./tsconfig.json --emitDeclarationOnly',
         description: 'typescript 파일 d.ts 파일 생성',
