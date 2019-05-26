@@ -28,11 +28,10 @@
     /////////// log ///////////
     "diagnostics": false, // Show diagnostic information.
     "traceResolution": false, // 모듈 검색에 대한 로그메세지 출력 여부
-    "listEmittedFiles": true, // 컴파일된 결과 파일들 이름을 터미널에 출력
-    "listFiles": true, // 컴파일된 파일들 이름을 터미널에 출력
+    "listEmittedFiles": false, // 컴파일된 결과 파일들 이름을 터미널에 출력
+    "listFiles": false, // 컴파일된 파일들 이름을 터미널에 출력
     "locale": "ko", // 에러메세지 출력 언어 설정
     "pretty": true, // 에러 메시지를 예쁘게 설정
-    // @TODO 테스트 필요
 
     /////////// React ///////////
     "jsx": "react", // jsx 지원

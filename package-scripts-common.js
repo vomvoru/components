@@ -15,9 +15,13 @@ module.exports = createPackageScripts({
     configPath: path.resolve(process.cwd(), 'tsconfig.json'),
   },
   createPkg: {
-    configPath: path.resolve(ROOT, 'create-pkg.conf.js'),
+    configPath: {
+      component: path.resolve(ROOT, 'create-pkg.component.conf.js'),
+      page: path.resolve(ROOT, 'create-pkg.page.conf.js'),
+    },
   },
   babel: true,
   updateVersion: true,
   publish: true,
+  storybook: true,
 });

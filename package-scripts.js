@@ -1,4 +1,4 @@
-const { create, publish, test, typecheck, eslint } = require('./package-scripts-common');
+const { create, publish, test, typecheck, eslint, storybook } = require('./package-scripts-common');
 
 module.exports = {
   scripts: {
@@ -7,5 +7,6 @@ module.exports = {
     test,
     typecheck,
     eslint,
+    storybook,
   },
 };

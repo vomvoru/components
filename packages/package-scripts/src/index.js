@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+/* eslint-disable complexity */
+
 const path = require('path');
 const { open, series, rimraf, concurrent } = require('nps-utils');
 const { getIndexFileType, TYPESCRIPT } = require('./getIndexFileType');
@@ -97,8 +99,14 @@ const createPackageScripts = config => {
      * create-pkg NPM Scripts
      */
     scripts.create = {
-      script: `create-pkg -c ${config.createPkg.configPath} -i`,
-      description: '새로운 패키지 추가',
+      component: {
+        script: `create-pkg -c ${config.createPkg.configPath.component} -i`,
+        description: '새로운 컴포넌트 패키지 추가',
+      },
+      page: {
+        script: `create-pkg -c ${config.createPkg.configPath.page} -i`,
+        description: '새로운 Page 패키지 추가',
+      },
     };
   }
 
@@ -181,6 +189,13 @@ const createPackageScripts = config => {
         script: 'npm publish',
         description: '(Jenkins 전용) npm install <name> 으로 설치 가능하도록 npm publish',
       },
+    };
+  }
+
+  if (config.storybook) {
+    scripts.storybook = {
+      script: 'start-storybook',
+      description: 'storybook dev sever 실행',
     };
   }
 

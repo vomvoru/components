@@ -1,5 +1,5 @@
 {
-  "name": "@snacknews/Header",
+  "name": "@snacknews/group-list",
   "version": "0.0.1",
   "description": "",
   "author": "vomvoru",
@@ -12,18 +12,19 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "nps",
-    "eslint": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx -c /Users/pch33/develop/components/.eslintrc.js --ignore-path /Users/pch33/develop/components/.gitignore"
+    "start": "nps"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-info": "^5.0.11",
+    "@storybook/addon-viewport": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-info": "^4.1.1",
+    "@types/storybook__addon-viewport": "^4.1.0",
     "@types/storybook__react": "^4.0.1",
     "eslint": "^5.16.0",
     "eslint-watch": "^5.0.1",
@@ -34,12 +35,10 @@
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "@babel/runtime-corejs3": "^7.4.4",
     "@types/styled-components": "4.1.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-icons": "^3.7.0",
     "styled-components": "^4.2.0"
   },
   "peerDependencies": {}

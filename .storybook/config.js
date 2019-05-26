@@ -1,6 +1,8 @@
 import { configure, storiesOf, addDecorator, addParameters } from '@storybook/react';
 import { addReadme } from 'storybook-readme';
 
+import 'normalize.css'
+
 addDecorator(addReadme);
 
 addParameters({
@@ -26,12 +28,22 @@ const getPackageName = filename => {
   return regexResult === null ? '' : regexResult[1]
 }
 
-function loadStories() {
-  const req = require.context('../packages', true, /^((?![\\/]node_modules|vendor[\\/]).)*\.stories\.[jt]sx?$/);
-  req.keys().forEach(filename => {
-    const packageName = getPackageName(filename);
-    const callback = req(filename).default;
-    callback((name, module) => storiesOf(packageName + '/' + name, module))
+const runStory = (req, filename, prefix) => {
+  const packageName = getPackageName(filename);
+  const callback = req(filename).default;
+  callback((name, module) => storiesOf(prefix + '/' + packageName + '/' + name, module))
+}
+
+const loadStories = () => {
+  const reqComponents = require.context('../components', true, /^((?![\\/]node_modules|vendor[\\/]).)*\.stories\.[jt]sx?$/);
+  const reqPages = require.context('../pages', true, /^((?![\\/]node_modules|vendor[\\/]).)*\.stories\.[jt]sx?$/);
+  
+  reqComponents.keys().forEach(filename => {
+    runStory(reqComponents, filename, 'Components')
+  });
+
+  reqPages.keys().forEach(filename => {
+    runStory(reqComponents, filename, 'Pages')
   });
 }
 

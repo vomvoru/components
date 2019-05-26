@@ -6,11 +6,12 @@ import Header from '../src/index';
 import Readme from '../README.md';
 
 export default (storiesOf: (name: string, module: NodeModule) => Story) => {
-  storiesOf('Header', module)
+  storiesOf('default', module)
     .addParameters({
       readme: {
         sidebar: Readme,
+        includePropTables: [Header],
       },
     })
-    .add('default', withInfo()(() => <Header />));
+    .add('Header', withInfo()(() => <Header />));
 };
