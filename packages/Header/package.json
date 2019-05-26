@@ -12,7 +12,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "nps"
+    "start": "nps",
+    "eslint": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx -c /Users/pch33/develop/components/.eslintrc.js --ignore-path /Users/pch33/develop/components/.gitignore"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
