@@ -1,18 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { FiMenu } from 'react-icons/fi';
+import BarWrapper from '@snack-news/bar-wrapper';
+
 import logo from '../img/logo.png';
 
 interface HeaderProps {}
-
-const Wrapper = styled.div`
-  display: flex;
-  margin-left: auto;
-  height: 54px;
-  align-items: center;
-  background-color: #fffefe;
-  border-bottom: 1px solid #e7e7e7;
-`;
 
 const Logo = () => (
   <div>
@@ -51,11 +44,11 @@ const Menu = () => (
 
 export const Header: React.SFC<HeaderProps> = () => {
   return (
-    <Wrapper>
+    <BarWrapper>
       <Logo />
       <Center />
       <Menu />
-    </Wrapper>
+    </BarWrapper>
   );
 };
 

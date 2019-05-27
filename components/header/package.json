@@ -16,7 +16,8 @@
   },
   "scripts": {
     "start": "nps",
-    "eslint": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx -c /Users/pch33/develop/components/.eslintrc.js --ignore-path /Users/pch33/develop/components/.gitignore"
+    "eslint": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx -c /Users/pch33/develop/components/.eslintrc.js --ignore-path /Users/pch33/develop/components/.gitignore",
+    "testc": "tsc -p /Users/pch/dev/components/components/header/tsconfig.json --noEmit --traceResolution"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -40,6 +41,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.4.4",
+    "@snack-news/bar-wrapper": "0.0.2",
     "@types/styled-components": "4.1.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
