@@ -1,4 +1,7 @@
 {
+  "publishConfig": {
+    "access": "public"
+  },
   "name": "@snack-news/eslint-config-vomvoru",
   "version": "0.0.3",
   "description": "vomvoru eslint config",
@@ -34,5 +37,5 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "prettier": "^1.17.0"
   },
-  "gitHead": "87b8ac8b05f37d67063bfcbb756eef5f3f085106"
+  "gitHead": "7c8b9eef1113bcf335a48b092fe924054fa0245c"
 }

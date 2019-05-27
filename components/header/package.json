@@ -1,4 +1,7 @@
 {
+  "publishConfig": {
+    "access": "public"
+  },
   "name": "@snack-news/header",
   "version": "0.0.3",
   "description": "",
@@ -43,5 +46,5 @@
     "react-icons": "^3.7.0",
     "styled-components": "^4.2.0"
   },
-  "gitHead": "87b8ac8b05f37d67063bfcbb756eef5f3f085106"
+  "gitHead": "7c8b9eef1113bcf335a48b092fe924054fa0245c"
 }

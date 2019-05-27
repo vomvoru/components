@@ -1,4 +1,7 @@
 {
+  "publishConfig": {
+    "access": "public"
+  },
   "name": "@snack-news/package-scripts",
   "version": "0.0.3",
   "engines": {
@@ -27,5 +30,5 @@
   "dependencies": {
     "nps-utils": "^1.7.0"
   },
-  "gitHead": "87b8ac8b05f37d67063bfcbb756eef5f3f085106"
+  "gitHead": "7c8b9eef1113bcf335a48b092fe924054fa0245c"
 }
