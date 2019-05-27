@@ -1,5 +1,5 @@
 {
-  "name": "@vomvoru33/create-pkg",
+  "name": "@snack-news/create-pkg",
   "version": "0.0.2",
   "engines": {
     "node": ">=8.0"
@@ -38,5 +38,5 @@
     "ncp": "^2.0.0",
     "ora": "^3.4.0"
   },
-  "gitHead": "ddc6b9b103607b03102abcd3911a7ecc059141ea"
+  "gitHead": "87b8ac8b05f37d67063bfcbb756eef5f3f085106"
 }

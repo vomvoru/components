@@ -1,9 +1,9 @@
-# @vomvoru33/create-pkg
+# @snack-news/create-pkg
 유틸용 패키지 템플릿을 만들어주는 CLI 도구
 
 ## Install
 ```shell
-npm install @vomvoru33/create-pkg
+npm install @snack-news/create-pkg
 ```
 
 ## Usage
