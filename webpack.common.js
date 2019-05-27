@@ -1,4 +1,5 @@
 const path = require('path');
+const babelConfig = require('./babel.config');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -9,12 +10,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.[tj]sx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            ...babelConfig,
           },
         },
       },
