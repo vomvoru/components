@@ -8,12 +8,8 @@
   "author": "vomvoru",
   "homepage": "",
   "license": "UNLICENSED",
-  "main": "dist/index.common.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "start": "nps"
   },

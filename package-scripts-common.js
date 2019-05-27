@@ -1,5 +1,5 @@
 const path = require('path');
-const createPackageScripts = require('@snack-news/package-scripts');
+const createPackageScripts = require('./utils/createPackageScripts');
 
 const ROOT = path.resolve(__dirname, '.');
 
