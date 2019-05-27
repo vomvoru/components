@@ -5,7 +5,7 @@
   "author": "vomvoru",
   "homepage": "",
   "license": "UNLICENSED",
-  "main": "dist/index.common.js",
+  "main": "src/index.tsx",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "directories": {
@@ -16,22 +16,13 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-info": "^5.0.11",
-    "@storybook/addon-viewport": "^5.0.11",
-    "@storybook/react": "^5.0.11",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
-    "@types/storybook__addon-actions": "^3.4.2",
-    "@types/storybook__addon-info": "^4.1.1",
-    "@types/storybook__addon-viewport": "^4.1.0",
-    "@types/storybook__react": "^4.0.1",
     "eslint": "^5.16.0",
     "eslint-watch": "^5.0.1",
     "jest": "^24.7.1",
     "npm": "^6.9.0",
     "nps": "^5.9.5",
-    "storybook-readme": "^5.0.3",
     "typescript": "^3.2.2"
   },
   "dependencies": {
@@ -40,6 +31,5 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0"
-  },
-  "peerDependencies": {}
+  }
 }

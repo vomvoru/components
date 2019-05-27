@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nps",
-    "init": "lerna bootstrap --hoist",
-    "storybook": "start-storybook",
-    "storybook:build": "build-storybook"
+    "init": "lerna bootstrap --hoist"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -34,7 +32,6 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@babel/runtime-corejs3": "^7.4.5",
-    "@storybook/react": "^5.0.11",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "@vomvoru/create-pkg": "file:packages/create-pkg",

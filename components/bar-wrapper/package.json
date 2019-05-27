@@ -1,11 +1,11 @@
 {
-  "name": "@snacknews/{{name}}",
+  "name": "@snacknews/bar-wrapper",
   "version": "0.0.1",
-  "description": "{{description}}",
+  "description": "",
   "author": "vomvoru",
   "homepage": "",
   "license": "UNLICENSED",
-  "main": "src/index.ts",
+  "main": "src/index.tsx",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "directories": {
@@ -31,6 +31,5 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0"
-  },
-  "peerDependencies": {}
+  }
 }

@@ -1,3 +1,4 @@
+// var nodeExternals = require('webpack-node-externals');
 const babelConfig = require('../babel.config')
 
 module.exports = ({ config, mode }) => {
@@ -14,5 +15,14 @@ module.exports = ({ config, mode }) => {
     ],
   });
   config.resolve.extensions.push('.ts', '.tsx');
+
+  // if(Array.isArray(config.externals) === false){
+  //   config.externals = [];
+  // }
+  
+  // config.externals.push(nodeExternals({
+  //   modulesFromFile: true,
+  // }))
+
   return config;
 };
