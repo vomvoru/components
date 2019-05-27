@@ -3,5 +3,5 @@
 
 ## Install
 ```shell
-npm install @snacknews/group-list
+npm install @snack-news/group-list
 ```

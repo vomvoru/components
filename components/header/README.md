@@ -3,7 +3,7 @@
 
 ## Install
 ```shell
-npm install @snacknews/header
+npm install @snack-news/header
 ```
 
 <!-- PROPS -->
