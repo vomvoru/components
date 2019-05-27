@@ -1,5 +1,5 @@
 // var nodeExternals = require('webpack-node-externals');
-const babelConfig = require('../babel.config')
+const babelConfig = require('../../../babel.config')
 
 module.exports = ({ config, mode }) => {
   config.module.rules.push({

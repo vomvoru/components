@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook",
-    "storybook:build": "build-storybook"
+    "start": "start-storybook",
+    "build": "build-storybook"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-viewport": "^5.0.11",
     "@storybook/react": "^5.0.11",
+    "@types/react": "^16.8.18",
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-info": "^4.1.1",
     "@types/storybook__addon-viewport": "^4.1.0",
@@ -21,6 +22,9 @@
     "storybook-readme": "^5.0.3"
   },
   "dependencies": {
-    "@snacknews/group-list": "file:../../components/group-list"
+    "@snacknews/bar-wrapper": "file:../../components/bar-wrapper",
+    "@snacknews/group-list": "file:../../components/group-list",
+    "@snacknews/header": "file:../../components/header",
+    "react": "^16.8.6"
   }
 }

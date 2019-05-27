@@ -2,8 +2,8 @@ import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 
 import { Story } from '@storybook/react';
-import GroupListHeader from '../src/GroupListHeader';
-import Readme from '../README.md';
+import GroupListHeader from '@snacknews/group-list';
+import Readme from '@snacknews/group-list/README.md';
 
 export default (storiesOf: (name: string, module: NodeModule) => Story) => {
   storiesOf('default', module)

@@ -34,6 +34,7 @@ const loadStories = () => {
   
   req.keys().forEach(filename => {
     const prefix = getPrefix(filename)
+    const callback = req(filename).default;
     callback((name, module) => storiesOf(prefix + '/' + name, module))
   });
 }

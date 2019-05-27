@@ -5,7 +5,7 @@
   "author": "vomvoru",
   "homepage": "",
   "license": "UNLICENSED",
-  "main": "src/index.tsx",
+  "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "directories": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.4.4",
+    "@snacknews/bar-wrapper": "file:../bar-wrapper",
     "@types/styled-components": "4.1.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
