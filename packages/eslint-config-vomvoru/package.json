@@ -1,6 +1,6 @@
 {
   "name": "@snack-news/eslint-config-vomvoru",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vomvoru eslint config",
   "homepage": "",
   "scripts": {
