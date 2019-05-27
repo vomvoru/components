@@ -6,7 +6,6 @@ const packages = path.resolve(ROOT, 'components');
 
 module.exports = {
   template: {
-    js: path.resolve(TEMPLATE_PATH, 'js'),
     ts: path.resolve(TEMPLATE_PATH, 'ts'),
   },
   commonTemplate: path.resolve(TEMPLATE_PATH, 'common'),

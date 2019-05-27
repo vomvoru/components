@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nps",
     "init": "lerna bootstrap --hoist",
+    "lerna:publish": "lerna publish",
     "storybook": "start-storybook",
     "storybook:build": "build-storybook"
   },
