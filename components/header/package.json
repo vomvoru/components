@@ -42,5 +42,6 @@
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
     "styled-components": "^4.2.0"
-  }
+  },
+  "gitHead": "ddc6b9b103607b03102abcd3911a7ecc059141ea"
 }

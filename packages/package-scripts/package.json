@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "nps-utils": "^1.7.0"
-  }
+  },
+  "gitHead": "ddc6b9b103607b03102abcd3911a7ecc059141ea"
 }
