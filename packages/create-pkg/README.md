@@ -1,9 +1,9 @@
-# @vomvoru/create-pkg
+# @vomvoru33/create-pkg
 유틸용 패키지 템플릿을 만들어주는 CLI 도구
 
 ## Install
 ```shell
-npm install @vomvoru/create-pkg
+npm install @vomvoru33/create-pkg
 ```
 
 ## Usage

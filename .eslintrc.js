@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@vomvoru/eslint-config-vomvoru"],
+  extends: ["@vomvoru33/eslint-config-vomvoru"],
 };

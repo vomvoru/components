@@ -1,4 +1,4 @@
-# @vomvoru/eslint-config-vomvoru
+# @vomvoru33/eslint-config-vomvoru
 eslint config
 
 ## 기능
@@ -11,13 +11,13 @@ eslint config
 
 **install**
 ```shell
-$ npm install --save-dev @vomvoru/eslint-config-vomvoru
+$ npm install --save-dev @vomvoru33/eslint-config-vomvoru
 # peerDependencies 설치
-$ npx install-peerdeps --dev @vomvoru/eslint-config-vomvoru --only-peers
+$ npx install-peerdeps --dev @vomvoru33/eslint-config-vomvoru --only-peers
 ```
 
 **config**
-eslint 설정파일에 `"extends": "@vomvoru/eslint-config-vomvoru"` 를 추가합니다.
+eslint 설정파일에 `"extends": "@vomvoru33/eslint-config-vomvoru"` 를 추가합니다.
 
 **vscode settings.json설정**
 ```json
