@@ -1,6 +1,6 @@
 {
   "name": "@snack-news/group-list",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": "vomvoru",
   "homepage": "",
@@ -40,6 +40,5 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0"
-  },
-  "peerDependencies": {}
+  }
 }

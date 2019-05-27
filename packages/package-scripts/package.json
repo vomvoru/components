@@ -1,6 +1,6 @@
 {
   "name": "@vomvoru33/package-scripts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "node": ">=8.0"
   },
@@ -26,6 +26,5 @@
   },
   "dependencies": {
     "nps-utils": "^1.7.0"
-  },
-  "peerDependencies": {}
+  }
 }
